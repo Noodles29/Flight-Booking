@@ -33,8 +33,8 @@
             <a href="index.php?page=home">HOME</a>
             <a href="index.php?page=about">ABOUT</a>
             <a href="#">CONTACT US</a>
-            <a class="nav_but login" href="#">LOG IN</a>
-            <a class="nav_but signup" href="#">SIGN UP</a>
+            <a class="nav_but login" href="index.php?page=login">LOG IN</a>
+            <a class="nav_but signup" href="index.php?page=signup">SIGN UP</a>
         </div>
     </div>
         <!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
@@ -104,7 +104,7 @@
       </div>
     </div>
   </div>
-  <div id="preloader"></div>
+  <!-- <div id="preloader"></div>
         <footer class="bg-light py-5">
             <div class="container">
                 <div class="row justify-content-center">
@@ -119,9 +119,9 @@
                         <div><?php echo $_SESSION['setting_contact'] ?></div>
                     </div>
                     <div class="col-lg-4 mr-auto text-center">
-                        <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+                        <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>-->
                         <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
-                        <a class="d-block" href="mailto:<?php echo $_SESSION['setting_email'] ?>"><?php echo $_SESSION['setting_email'] ?></a>
+                        <!-- <a class="d-block" href="mailto:<?php echo $_SESSION['setting_email'] ?>"><?php echo $_SESSION['setting_email'] ?></a>
                     </div>
                 </div>
             </div>
@@ -130,7 +130,7 @@
         </footer>
         
        <?php include('footer.php') ?>
-    </body>
+    </body> --> 
 
     <?php $conn->close() ?>
 
