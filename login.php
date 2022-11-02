@@ -30,7 +30,7 @@
 			<button>LOGIN</button>
 
 			<div id="signup" class="input-form">
-				<p>Don't have an account yet? - <a id="a-signup" href="./register.html">Sign up</a></p>
+				<p>Don't have an account yet? - <a id="a-signup" href="index.php?page=signup">Sign up</a></p>
 			</div>
 		</form>
 	</div>
@@ -72,9 +72,8 @@
 	.form-group {
 		display: flex;
 		margin-bottom: 20px;
+		position: relative;
 	}
-
-
 
 	label {
 		font-size: 22px;
@@ -82,7 +81,9 @@
 		font-weight: 600;
 	}
 
-	.form-control {
+	input.form-control {
+		position: absolute;
+		right: 0;
 		width: 344px;
 		height: 40px;
 		padding: 12px 20px;
