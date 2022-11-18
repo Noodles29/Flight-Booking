@@ -14,6 +14,7 @@
   	<div class="col-lg-12">
   		<div class="col-md-1 float-left" style="display: flex;">
   			<div class="logo">
+        <img class="logo" src="./assets/img/logo.png">
   				<span class="fa fa-plane-departure"></span>
   			</div>
   		</div>
