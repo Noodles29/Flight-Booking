@@ -15,8 +15,12 @@
 			<div class="card">
 				<div class="card-body">
 				<?php echo "Welcome back ".($_SESSION['login_type'] == 3 ? "Dr. ".$_SESSION['login_name'].','.$_SESSION['login_name_pref'] : $_SESSION['login_name'])."!"  ?>
-									
+
 				</div>
+					<div> 
+					<p> đây là dòng test</p>
+					</div>
+
 				<hr>
 				<div class="row">
 				
