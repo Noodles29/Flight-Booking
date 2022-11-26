@@ -117,7 +117,9 @@ include 'admin/db_connect.php';
 
         </div>
     </div>
+    
 </header>
+
 <section class="page-section" id="menu">
 
     <div id="portfolio" class="container">
@@ -139,16 +141,23 @@ include 'admin/db_connect.php';
                             <img class="img-fluid" src="assets/img/<?php echo $row['logo_path'] ?>" alt="" />
 
                             <div class="port-content text-center">
-                                <a class="btn-primary btn">Find Flights</a>
+                                <button id="btn_find" class="btn-primary btn"  > Find Flights </button>
                             </div>
                         </div>
                     </div>
+            
                 <?php endwhile; ?>
 
             </div>
+            
         </div>
     </div>
+    
     <script>
+        document.getElementById("btn_find")?.addEventListener("click", handleClick)
+        {
+
+        }
         $('.view_prod').click(function() {
             uni_modal_right('Product', 'view_prod.php?id=' + $(this).attr('data-id'))
         })
