@@ -160,7 +160,7 @@ include 'admin/db_connect.php';
             if ($(this).val() == 1) {
                 $('#rdate').hide()
             } else {
-                $(".rdate").css("display", "grid");
+                $("#rdate").css("display", "grid");
                 $('#rdate').show()
             }
         })

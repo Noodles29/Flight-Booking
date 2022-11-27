@@ -61,22 +61,7 @@ ob_end_flush();
   ?>
 
 
-  <div class="modal fade" id="confirm_modal" role='dialog'>
-    <div class="modal-dialog modal-md" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Confirmation</h5>
-        </div>
-        <div class="modal-body">
-          <div id="delete_content"></div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" id='confirm' onclick="">Continue</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+
   <div class="modal fade" id="uni_modal" role='dialog'>
     <div class="modal-dialog modal-md" role="document">
       <div class="modal-content">
@@ -127,10 +112,10 @@ ob_end_flush();
         </div>
       </div>
     </div>
-    <br>
+    <!-- <br>
     <div class="container">
       <div class="small text-center text-muted"> <?php echo $_SESSION['setting_name'] ?> | <a href="https://www.campcodes.com" target="_blank">CampCodes</a></div>
-    </div>
+    </div> -->
   </footer> 
 
   <?php include('footer.php') ?>
