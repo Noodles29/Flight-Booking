@@ -139,10 +139,11 @@ include 'admin/db_connect.php';
                     <div class="col-lg-4 col-sm-6">
                         <div class="portfolio-box" href="#">
                             <img class="img-fluid" src="assets/img/<?php echo $row['logo_path'] ?>" alt="" />
-
-                            <div class="port-content text-center">
-                                <button id="btn_find" class="btn-primary btn"  > Find Flights </button>
-                            </div>
+                                <form id="manage-filter" action="index.php?page=flights" method="POST">
+                                    <div class="port-content text-center">
+                                        <button type="submit" class="btn-primary btn"  > Find Flights </button>
+                                    </div>
+                                </form>
                         </div>
                     </div>
             
