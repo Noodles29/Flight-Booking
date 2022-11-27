@@ -12,36 +12,36 @@ include 'admin/db_connect.php';
     }
 </style>
 <header>
-    <div class="slider">
-        <div class="slideshow-container">
-            <!-- Full-width images with number and caption text -->
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 3</div>
-                <img class="imgSlide" src="./assets/img/img1.jpg">
-            </div>
+<div class="slider">
+		<div class="slideshow-container">
+			<!-- Full-width images with number and caption text -->
+			<div class="mySlides fade">
+				<div class="numbertext">1 / 3</div>
+				<img class="imgSlide" src="./assets/img/img1.jpg">
+			</div>
 
-            <div class="mySlides fade">
-                <div class="numbertext">2 / 3</div>
-                <img class="imgSlide" src="assets/img/img2.jpg">
-            </div>
+			<div class="mySlides fade">
+				<div class="numbertext">2 / 3</div>
+				<img class="imgSlide" src="assets/img/img2.jpg">
+			</div>
 
-            <div class="mySlides fade">
-                <div class="numbertext">3 / 3</div>
-                <img class="imgSlide" src="assets/img/img3.jpg">
-            </div>
+			<div class="mySlides fade">
+				<div class="numbertext">3 / 3</div>
+				<img class="imgSlide" src="assets/img/img3.jpg">
+			</div>
 
-            <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
+			<!-- Next and previous buttons -->
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
 
-        <!-- The dots/circles -->
-        <div class="slide_dot">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-    </div>
+		<!-- The dots/circles -->
+		<div class="slide_dot">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+		</div>
+	</div>
 
     <div class="container-fluid h-100">
         <div class="row h-100 align-items-center justify-content-center text-center">
@@ -139,11 +139,18 @@ include 'admin/db_connect.php';
                     <div class="col-lg-4 col-sm-6">
                         <div class="portfolio-box" href="#">
                             <img class="img-fluid" src="assets/img/<?php echo $row['logo_path'] ?>" alt="" />
+<<<<<<< HEAD
                                 <form id="manage-filter" action="index.php?page=flights" method="POST">
                                     <div class="port-content text-center">
                                         <button type="submit" class="btn-primary btn"  > Find Flights </button>
                                     </div>
                                 </form>
+=======
+
+                            <!-- <div class="port-content text-center">
+                                <button id="btn_find" class="btn-primary btn"  > Find Flights </button>
+                            </div> -->
+>>>>>>> 94aadfd83df2b242b9ba117bed25012d7fbe157e
                         </div>
                     </div>
             
@@ -170,7 +177,7 @@ include 'admin/db_connect.php';
             if ($(this).val() == 1) {
                 $('#rdate').hide()
             } else {
-                $(".rdate").css("display", "grid");
+                $("#rdate").css("display", "grid");
                 $('#rdate').show()
             }
         })
