@@ -77,7 +77,7 @@ Class Action {
 		$data .= ", contact = '$contact' ";
 		$data .= ", address = '$address' ";
 		$data .= ", username = '$email' ";
-		$data .= ", password = '".md5($password)."' ";
+		$data .= ", password = '$password'";
 		$data .= ", type = 3";
 		$chk = $this->db->query("SELECT * FROM users where username = '$email' ")->num_rows;
 		if($chk > 0){
