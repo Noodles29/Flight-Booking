@@ -12,7 +12,7 @@
 		</div>
 		<div id="password" class="form-group">
 			<label class="control-label">Confirm Password:</label>
-			<input id="password-reinput" , class="form-control" , type="password" name="">
+			<input id="password-reinput" , class="form-control" , type="password" name="confirmPassword">
 		</div>
 		<div class="form-group">
 			<label id="email" class="control-label">Name:</label>
@@ -138,11 +138,16 @@
 					//window.location.replace("./login.php");
 					var url = "index.php?page=login";
 					$(location).attr('href', url);
-				} else {
+				} else if(resp == 2) {
 					$('#signup-frm').prepend('<div class="alert alert-danger">Email already exist.</div>')
+					$('#signup-frm button[type="submit"]').removeAttr('disabled').html('Create');
+				}
+				else {
+					$('#signup-frm').prepend('<div class="alert alert-danger">Password and Confirm Password are not the same.</div>')
 					$('#signup-frm button[type="submit"]').removeAttr('disabled').html('Create');
 				}
 			}
 		})
-	})
+	}
+)
 </script>

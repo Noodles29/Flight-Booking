@@ -141,7 +141,7 @@ include 'admin/db_connect.php';
                             <img class="img-fluid" src="assets/img/<?php echo $row['logo_path'] ?>" alt="" />
                                 <form  id="manage-filter" action="index.php?page=flights2" method="POST">
                                     <div class="port-content text-center" style="justify-content: center; display: flex; " >
-                                        <button type="submit" class="btn btn-success" name="airline_id" value="<?php echo $row['id'] ?> "> Find Flights </button>
+                                        <button type="submit" class="btn btn-primary" name="airline_id" value="<?php echo $row['id'] ?> " style="background-color: #ff6633" ><i class="fa fa-plane-departure"></i> Find Flights </button>
                                     </div>
                                 </form>
                         </div>
