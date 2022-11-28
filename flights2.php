@@ -207,9 +207,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 					}
 				
 					if ($_SERVER['REQUEST_METHOD'] == "POST")
-						$where .= " and f.airline_id ='$airline_id'";
+						// $where .= " and f.airline_id ='$airline_id'";
 					
-					$flight = $conn->query("SELECT f.*,a.airlines,a.logo_path FROM flight_list f inner join airlines_list a on f.airline_id = a.id $where order by rand()");
+					$flight = $conn->query("SELECT f.*,a.airlines,a.logo_path FROM flight_list f inner join airlines_list a on f.airline_id = a.id and f.airline_id ='$airline_id' order by rand()");
 					if ($flight->num_rows > 0) :
 						while ($row = $flight->fetch_assoc()) :
 							$booked = $conn->query("SELECT * FROM booked_flight where flight_id = " . $row['id'])->num_rows;
