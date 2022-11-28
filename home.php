@@ -51,7 +51,7 @@ include 'admin/db_connect.php';
                 <div class="col-md-12 mb-2 text-left">
                     <div class="card">
                         <div class="card-body">
-                            <form id="manage-filter" action="index.php?page=flights" method="POST">
+                            <form id="manage-filter" action="index.php?page=flights2" method="POST">
                                 <div class="row form-group">
                                     <div class="col-sm-3">
                                         <label for="" class="control-label">From</label>
@@ -139,18 +139,11 @@ include 'admin/db_connect.php';
                     <div class="col-lg-4 col-sm-6">
                         <div class="portfolio-box" href="#">
                             <img class="img-fluid" src="assets/img/<?php echo $row['logo_path'] ?>" alt="" />
-<<<<<<< HEAD
-                                <form id="manage-filter" action="index.php?page=flights" method="POST">
-                                    <div class="port-content text-center">
-                                        <button type="submit" class="btn-primary btn"  > Find Flights </button>
+                                <form  id="manage-filter" action="index.php?page=flights2" method="POST">
+                                    <div class="port-content text-center" style="justify-content: center; display: flex; " >
+                                        <button type="submit" class="btn btn-success" name="airline_id" value="<?php echo $row['id'] ?> "> Find Flights </button>
                                     </div>
                                 </form>
-=======
-
-                            <!-- <div class="port-content text-center">
-                                <button id="btn_find" class="btn-primary btn"  > Find Flights </button>
-                            </div> -->
->>>>>>> 94aadfd83df2b242b9ba117bed25012d7fbe157e
                         </div>
                     </div>
             
