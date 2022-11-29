@@ -203,7 +203,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 					<?php
 					$airport = $conn->query("SELECT * FROM airport_list ");
 					while ($row = $airport->fetch_assoc()) {
-						$aname[$row['id']] = ucwords($row['airport'] . ', ' . $row['location']);
+						$aname[$row['id']] = ucwords($row['airport'] . ' - ' . $row['location']);
 					}
 					$where = " where date(f.departure_datetime) > '" . date("Y-m-d") . "' ";
 					if ($_SERVER['REQUEST_METHOD'] == "POST")
@@ -218,7 +218,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 									<img src="assets/img/<?php echo $row['logo_path'] ?>" alt="">
 								</div>
 								<div class="col-md-6">
-									<p><b><?php echo $aname[$row['departure_airport_id']] . ' - ' . $aname[$row['arrival_airport_id']] ?></b></p>
+									<p><b><?php echo $aname[$row['departure_airport_id']] . ' -> ' . $aname[$row['arrival_airport_id']] ?></b></p>
 									<p><small>Airline: <b><?php echo $row['airlines'] ?></b></small></p>
 									<p><small>Departure: <b><?php echo date('h:i A', strtotime($row['departure_datetime'])) ?></b></small></p>
 									<p><small>Arrival: <b><?php echo (date('M d,Y', strtotime($row['departure_datetime'])) == date('M d,Y', strtotime($row['arrival_datetime']))) ? date('h:i A', strtotime($row['arrival_datetime'])) : date('M d,Y h:i A', strtotime($row['arrival_datetime'])) ?></b></small></p>
@@ -250,7 +250,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 						<?php
 						$airport = $conn->query("SELECT * FROM airport_list ");
 						while ($row = $airport->fetch_assoc()) {
-							$aname[$row['id']] = ucwords($row['airport'] . ', ' . $row['location']);
+							$aname[$row['id']] = ucwords($row['airport'] . ' - ' . $row['location']);
 						}
 						$where = " where date(f.departure_datetime) > '" . date("Y-m-d") . "' ";
 						if ($_SERVER['REQUEST_METHOD'] == "POST")
@@ -266,7 +266,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 										<img src="assets/img/<?php echo $row['logo_path'] ?>" alt="">
 									</div>
 									<div class="col-md-6">
-										<p><b><?php echo $aname[$row['departure_airport_id']] . ' - ' . $aname[$row['arrival_airport_id']] ?></b></p>
+										<p><b><?php echo $aname[$row['departure_airport_id']] . ' -> ' . $aname[$row['arrival_airport_id']] ?></b></p>
 										<p><small>Airline: <b><?php echo $row['airlines'] ?></b></small></p>
 										<p><small>Departure: <b><?php echo date('h:i A', strtotime($row['departure_datetime'])) ?></b></small></p>
 										<p><small>Arrival: <b><?php echo (date('M d,Y', strtotime($row['departure_datetime'])) == date('M d,Y', strtotime($row['arrival_datetime']))) ? date('h:i A', strtotime($row['arrival_datetime'])) : date('M d,Y h:i A', strtotime($row['arrival_datetime'])) ?></b></small></p>

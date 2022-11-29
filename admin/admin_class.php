@@ -79,6 +79,11 @@ Class Action {
 		$data .= ", username = '$email' ";
 		$data .= ", password = '$password'";
 		$data .= ", type = 3";
+		if($password != $confirmPassword) 
+		{	return 3;
+			exit;
+		}
+		else{
 		$chk = $this->db->query("SELECT * FROM users where username = '$email' ")->num_rows;
 		if($chk > 0){
 			return 2;
@@ -86,7 +91,7 @@ Class Action {
 		}
 			$save = $this->db->query("INSERT INTO users set ".$data);
 		if($save){
-			$qry = $this->db->query("SELECT * FROM users where username = '".$email."' and password = '".md5($password)."' ");
+			$qry = $this->db->query("SELECT * FROM users where username = '".$email."' and password = '".$password."' ");
 			if($qry->num_rows > 0){
 				foreach ($qry->fetch_array() as $key => $value) {
 					if($key != 'passwors' && !is_numeric($key))
@@ -96,6 +101,7 @@ Class Action {
 			return 1;
 		}
 	}
+}
 
 	function save_settings(){
 		extract($_POST);
