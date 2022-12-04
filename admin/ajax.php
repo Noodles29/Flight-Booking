@@ -23,6 +23,7 @@ if($action == 'logout2'){
 	$logout = $crud->logout2();
 	if($logout)
 		echo $logout;
+	// echo "<h2>PHP is Fun!</h2>";
 }
 if($action == 'save_user'){
 	$save = $crud->save_user();

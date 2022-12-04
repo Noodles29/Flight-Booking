@@ -49,11 +49,12 @@ Class Action {
 		header("location:login.php");
 	}
 	function logout2(){
-		session_destroy();
-		foreach ($_SESSION as $key => $value) {
-			unset($_SESSION[$key]);
-		}
-		header("location:../index.php");
+		// session_destroy();
+		// foreach ($_SESSION as $key => $value) {
+		// 	unset($_SESSION[$key]);
+		// }
+		echo "Error";
+		// header("location:index.php?page=login");
 	}
 
 	function save_user(){

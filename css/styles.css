@@ -4442,34 +4442,75 @@ input[type=button].btn-block {
 }
 
 .header {
-  width: 100%;
-  height: 75px;
   position: fixed;
   top: 0;
+  width: 100%;
+  height: 75px;
   background-color: white;
-  display: block;
+  box-shadow: 0 0 12px #00c2ff;
+  /* display: block; */
   z-index: 1;
 }
 
 .nav {
-  position: relative;
+  /* height: 75px; */
   float: right;
   font-weight: 700;
   font-size: 18px;
+  margin-right: 70px;
+
   /* display: inline-block; */
 }
 
-.nav a {
+
+.nav li {
+  display: inline;
+  list-style: none;
+  position: relative;
+}
+
+
+
+.nav li a {
   color: #000033;
   text-decoration: none;
   text-transform: uppercase;
   line-height: 75px;
-  padding: 12px 22px;
+  padding: 28px 22px;
+  cursor: pointer;
+}
+
+.nav a:hover {
+  color: white;
+  background-color: #000033;
 }
 
 .nav_but {
   border-radius: 25px;
-  padding: 12px 20px;
+  padding: 12px 20px !important;
+}
+
+.subnav {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  box-shadow: 3px 3px 10px #6699cc;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+li:hover .subnav {
+  display: block;
+}
+
+.nav a ul.subnav {
+  display: none;
+}
+
+.subnav li {
+  list-style: none;
+  min-width: 100px;
 }
 
 .login {
@@ -4480,7 +4521,11 @@ input[type=button].btn-block {
   color: white !important;
   background-color: #000033;
   margin-left: 12px;
-  margin-right: 70px;
+}
+
+.signup:hover {
+  background-color: white;
+   color: #000033;
 }
 
 /* .nav {

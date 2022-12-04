@@ -116,6 +116,10 @@
 		color: #00ccff;
 		text-decoration: none;
 	}
+
+	footer {
+		display: none;
+	}
 </style>
 
 <script>

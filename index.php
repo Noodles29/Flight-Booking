@@ -14,14 +14,14 @@ foreach ($query as $key => $value) {
 ob_end_flush();
 ?>
 
-<style>
+<!-- <style>
   header.masthead {
     /* background: url(assets/img/<?php echo $_SESSION['setting_cover_img'] ?>);
 		  background-repeat: no-repeat;
 		  background-size: cover; */
     background-color: #66CCFF;
   }
-</style>
+</style> -->
 
 <body id="page-top">
   <!-- Navigation-->
@@ -31,13 +31,40 @@ ob_end_flush();
   </div>
   <div class="header">
     <img class="logo" src="./assets/img/logo.png">
-    <div class="nav">
+    <!-- <div class="nav">
       <a href="index.php?page=home">HOME</a>
       <a href="index.php?page=about">ABOUT</a>
-      <a href="#">CONTACT US</a>
-      <a class="nav_but login" href="index.php?page=login">LOG IN</a>
-      <a class="nav_but signup" href="index.php?page=signup">SIGN UP</a>
-    </div>
+      <a href="#footer">CONTACT US</a>
+      <?php if (isset($_SESSION['login_id'])) : ?>
+        <a class="username"><i class="icofont-ui-user"></i><?php echo ($_SESSION['login_name']) ?></a>
+        <ul class="subnav">
+          <li><a href="index.php?page=profile">Profile</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      <?php else : ?>
+        <a class="nav_but login" href="index.php?page=login">LOG IN</a>
+        <a class="nav_but signup" href="index.php?page=signup">SIGN UP</a>
+      <?php endif; ?>
+    </div> -->
+
+
+    <ul class="nav">
+      <li><a href="index.php?page=home">Home</a></li>
+      <li><a href="index.php?page=about">About</a></li>
+      <li><a href="#footer">Contact us</a></li>
+      <?php if (isset($_SESSION['login_id'])) : ?>
+        <li>
+          <a class="username"><i class="icofont-ui-user"></i><?php echo ($_SESSION['login_name']) ?></a>
+          <ul class="subnav">
+            <li><a href="index.php?page=profile">Profile</a></li>
+            <li><a id="logout-btn" href="logout.php">Logout</a></li>
+          </ul>
+        </li>
+      <?php else : ?>
+        <li><a class="nav_but login" href="index.php?page=login">LOG IN</a></li>
+        <li><a class="nav_but signup" href="index.php?page=signup">SIGN UP</a></li>
+      <?php endif; ?>
+    </ul>
   </div>
   <!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container">
@@ -92,7 +119,7 @@ ob_end_flush();
     </div>
   </div>
   <div id="preloader"></div>
-  <footer class="bg-light py-5">
+  <footer class="bg-light py-5" id="footer">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
@@ -116,7 +143,7 @@ ob_end_flush();
     <div class="container">
       <div class="small text-center text-muted"> <?php echo $_SESSION['setting_name'] ?> | <a href="https://www.campcodes.com" target="_blank">CampCodes</a></div>
     </div> -->
-  </footer> 
+  </footer>
 
   <?php include('footer.php') ?>
 </body>
