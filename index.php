@@ -30,7 +30,7 @@ ob_end_flush();
     </div>
   </div>
   <div class="header">
-    <img class="logo" src="./assets/img/logo.png">
+    <a href="index.php?page=home"><img class="logo" src="./assets/img/logo.png"></a>
     <!-- <div class="nav">
       <a href="index.php?page=home">HOME</a>
       <a href="index.php?page=about">ABOUT</a>
