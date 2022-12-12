@@ -1,25 +1,25 @@
 <style>
 	.logo {
-    margin: auto;
-    font-size: 20px;
-    background: white;
-    padding: 7px 11px;
-    border-radius: 50% 50%;
-    color: #000000b3;
-}
+    margin-left: -30px;
+    height: 50px;
+    
+  }
+  nav#bg-primary{
+      background: white !important;
+  }
+  a.text-white{
+    color: black !important;
+  }
 </style>
 
-<nav class="navbar navbar-light fixed-top bg-primary" style="padding:0; color: white !important;">
-  <div class="container-fluid mt-2 mb-2">
+<nav class="navbar navbar-light fixed-top bg-primary" id="bg-primary" style="padding: 0;">
   	<div class="col-lg-12">
   		<div class="col-md-1 float-left" style="display: flex;">
   			<div class="logo">
-        <img class="logo" src="./assets/img/logo.png">
-  				<span class="fa fa-plane-departure"></span>
+        <img class="logo" src="../assets/img/logo.png">
   			</div>
   		</div>
       <div class="col-md-4 float-left text-white">
-        <large><b>Online Flight Booking System</b></large>
       </div>
 	  	<div class="col-md-2 float-right text-white">
 	  		<a href="ajax.php?action=logout" style="color: black;"><?php echo $_SESSION['login_name'] ?> <i class="fa fa-power-off"></i></a>

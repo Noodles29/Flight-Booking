@@ -63,7 +63,7 @@
 								<tr>
 									<td class="text-center"><?php echo $i++ ?></td>
 									<td class="text-center">
-										<img src="../assets/img/<?php echo $row['logo_path'] ?>" alt="">
+										<img id="airline-logo" src="../assets/img/<?php echo $row['logo_path'] ?>" alt="">
 									</td>
 									<td class="">
 										 <b><?php echo $row['airlines'] ?></b>
@@ -92,7 +92,7 @@
 	td p{
 		margin: unset
 	}
-	img{
+	#airline-logo{
 		max-width:100px;
 		max-height: 150px;
 	}
