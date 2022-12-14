@@ -14,14 +14,14 @@ foreach ($query as $key => $value) {
 ob_end_flush();
 ?>
 
-<!-- <style>
-  header.masthead {
-    /* background: url(assets/img/<?php echo $_SESSION['setting_cover_img'] ?>);
-		  background-repeat: no-repeat;
-		  background-size: cover; */
-    background-color: #66CCFF;
+<style>
+  .avatar {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin: 10px;
   }
-</style> -->
+</style>
 
 <body id="page-top">
   <!-- Navigation-->
@@ -31,21 +31,6 @@ ob_end_flush();
   </div>
   <div class="header">
     <a href="index.php?page=home"><img class="logo" src="./assets/img/logo.png"></a>
-    <!-- <div class="nav">
-      <a href="index.php?page=home">HOME</a>
-      <a href="index.php?page=about">ABOUT</a>
-      <a href="#footer">CONTACT US</a>
-      <?php if (isset($_SESSION['login_id'])) : ?>
-        <a class="username"><i class="icofont-ui-user"></i><?php echo ($_SESSION['login_name']) ?></a>
-        <ul class="subnav">
-          <li><a href="index.php?page=profile">Profile</a></li>
-          <li><a href="#">Logout</a></li>
-        </ul>
-      <?php else : ?>
-        <a class="nav_but login" href="index.php?page=login">LOG IN</a>
-        <a class="nav_but signup" href="index.php?page=signup">SIGN UP</a>
-      <?php endif; ?>
-    </div> -->
 
 
     <ul class="nav">
@@ -54,7 +39,8 @@ ob_end_flush();
       <li><a href="#footer">Contact us</a></li>
       <?php if (isset($_SESSION['login_id'])) : ?>
         <li>
-          <a class="username"><i class="icofont-ui-user"></i><?php echo ($_SESSION['login_name']) ?></a>
+          <a class="username"><i class="icofont-ui-user"></i><?php echo ($_SESSION['login_name']) ?><img class="avatar" src="assets/img/<?php echo ($_SESSION['login_avatar']) ?>" alt="" /></a>
+          
           <ul class="subnav">
             <li><a href="index.php?page=profile">Profile</a></li>
             <li><a id="logout-btn" href="logout.php">Logout</a></li>
