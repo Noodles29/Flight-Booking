@@ -39,10 +39,11 @@ ob_end_flush();
       <li><a href="#footer">Contact us</a></li>
       <?php if (isset($_SESSION['login_id'])) : ?>
         <li>
-          <a class="username"><i class="icofont-ui-user"></i><?php echo ($_SESSION['login_name']) ?><img class="avatar" src="assets/img/<?php echo ($_SESSION['login_avatar']) ?>" alt="" /></a>
+          <a class="username"><?php echo ($_SESSION['login_name']) ?><img class="avatar" src="assets/img/<?php echo ($_SESSION['login_avatar']) ?>" alt="" /></a>
           
           <ul class="subnav">
             <li><a href="index.php?page=profile">Profile</a></li>
+            <li><a id="purchase-btn" href="index.php?page=purchase_order">History</a></li>
             <li><a id="logout-btn" href="logout.php">Logout</a></li>
           </ul>
         </li>

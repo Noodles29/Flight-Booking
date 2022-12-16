@@ -229,7 +229,8 @@ class Action
 	{
 		extract($_POST);
 		foreach ($name as $k => $value) {
-			$data = " flight_id = $flight_id ";
+			$data = " flight_id = '$flight_id' ";
+			$data .= " , user_id = ".($_SESSION['login_id'])." ";
 			$data .= " , name = '$name[$k]' ";
 			$data .= " , address = '$address[$k]' ";
 			$data .= " , contact = '$contact[$k]' ";
