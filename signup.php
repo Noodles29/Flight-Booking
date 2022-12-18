@@ -136,7 +136,8 @@
 			success: function(resp) {
 				if (resp == 1) {
 					//window.location.replace("./login.php");
-					var url = "index.php?page=login";
+					alert("Sign up successfully.");
+					var url = "index.php?page=home";
 					$(location).attr('href', url);
 				} else if(resp == 2) {
 					$('#signup-frm').prepend('<div class="alert alert-danger">Email already exist.</div>')

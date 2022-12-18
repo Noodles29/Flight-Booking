@@ -230,7 +230,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 								</div>
 								<div class="col-md-3 text-center align-self-end-sm">
 									<h4 class="text-right"><b><?php echo number_format($row['price'], 2) ?></b></h4>
-									<button class="btn-outline-primary  btn  mb-4 book_flight" type="button" data-id="<?php echo $row['id'] ?>" data-name="<?php echo $aname[$row['departure_airport_id']] . ' - ' . $aname[$row['arrival_airport_id']] ?>" data-max="<?php echo $row['seats'] - $booked ?>">Book Now</button>
+									<button class="btn-outline-primary  btn  mb-4 book_flight" type="button" data-id="<?php echo $row['id'] ?>" data-name="<?php echo $aname[$row['departure_airport_id']] . ' - ' . $aname[$row['arrival_airport_id']] ?>" data-max="<?php echo $row['seats'] - $booked ?>"  data-price="<?php echo $row['price']?> ">Book Now</button>
 								</div>
 							</div>
 							<hr class="divider" style="max-width: 60vw">
@@ -278,7 +278,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 									</div>
 									<div class="col-md-3 text-center align-self-end-sm">
 										<h4 class="text-right"><b><?php echo number_format($row['price'], 2) ?></b></h4>
-										<button class="btn-outline-primary  btn  mb-4 book_flight" type="button" data-id="<?php echo $row['id'] ?>" data-name="<?php echo $aname[$row['departure_airport_id']] . ' - ' . $aname[$row['arrival_airport_id']] ?>" data-max="<?php echo $row['seats'] - $booked ?>">Book Now</button>
+										<button class="btn-outline-primary  btn  mb-4 book_flight" type="button" data-id="<?php echo $row['id'] ?>" data-name="<?php echo $aname[$row['departure_airport_id']] . ' - ' . $aname[$row['arrival_airport_id']] ?>" data-max="<?php echo $row['seats'] - $booked ?>"  data-price="<?php echo $row['price']?> ">Book Now</button>
 									</div>
 								</div>
 								<hr class="divider" style="max-width: 60vw">
@@ -317,7 +317,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			alert("There is no Available Seats for the selected flight");
 			return false;
 		}
-		uni_modal($(this).attr('data-name'), "book_flight.php?id=" + $(this).attr('data-id') + "&max=" + $(this).attr('data-max'), 'mid-large')
+		uni_modal($(this).attr('data-name'), "book_flight.php?id=" + $(this).attr('data-id') + "&max=" + $(this).attr('data-max')  + "&price=" + $(this).attr('data-price'), 'mid-large')
 	})
 	$('[name="trip"]').on("keypress change keyup", function() {
             if ($(this).val() == 1) {
