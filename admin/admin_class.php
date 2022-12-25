@@ -225,19 +225,17 @@ class Action
 		if ($delete)
 			return 1;
 	}
-	function book_flight()
-	{
+	function book_flight(){
 		extract($_POST);
 		foreach ($name as $k => $value) {
-			$data = " flight_id = '$flight_id' ";
-			$data .= " , user_id = ".($_SESSION['login_id'])." ";
+			$data = " flight_id = $flight_id ";
 			$data .= " , name = '$name[$k]' ";
 			$data .= " , address = '$address[$k]' ";
 			$data .= " , contact = '$contact[$k]' ";
 
-			$save[] = $this->db->query("INSERT INTO booked_flight set " . $data);
+			$save[] = $this->db->query("INSERT INTO booked_flight set ".$data);
 		}
-		if (isset($save))
+		if(isset($save))
 			return 1;
 	}
 	function update_booked()
