@@ -33,14 +33,24 @@ ob_end_flush();
     <a href="index.php?page=home"><img class="logo" src="./assets/img/logo.png"></a>
 
 
+
     <ul class="nav">
       <li><a href="index.php?page=home">Home</a></li>
       <li><a href="index.php?page=about">About</a></li>
       <li><a href="#footer">Contact us</a></li>
       <?php if (isset($_SESSION['login_id'])) : ?>
         <li>
-          <a class="username"><?php echo ($_SESSION['login_name']) ?><img class="avatar" src="assets/img/<?php echo ($_SESSION['login_avatar']) ?>" alt="" /></a>
-          
+          <?php
+          $sql = "SELECT * FROM users WHERE id = '{$_SESSION["login_id"]}'";
+          $result = mysqli_query($conn, $sql);
+          if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+          ?>
+              <a class="username"><?php echo ($row['name']) ?><img class="avatar" src="assets/img/<?php echo ($row['avatar']) ?>" alt="" /></a>
+          <?php
+            }
+          }
+          ?>
           <ul class="subnav">
             <li><a href="index.php?page=profile">Profile</a></li>
             <li><a id="purchase-btn" href="index.php?page=purchase_order">History</a></li>
@@ -53,6 +63,8 @@ ob_end_flush();
       <?php endif; ?>
     </ul>
   </div>
+
+
   <!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="./"><?php echo $_SESSION['setting_name'] ?></a>
