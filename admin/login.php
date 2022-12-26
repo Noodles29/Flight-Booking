@@ -43,10 +43,10 @@ header("location:index.php?page=home");
 		left:0;
 		width:60%;
 		height: calc(100%);
-		background:#59b6ec61;
+		background: rgba(255,255,255,0.8);
 		display: flex;
 		align-items: center;
-		background: url(../assets/img/travel-cover.jpg);
+		background: url(../assets/img/travel2.jpg);
 	    background-repeat: no-repeat;
 	    background-size: cover;
 	}
@@ -54,16 +54,8 @@ header("location:index.php?page=home");
 		margin: auto;
 		z-index: 1
 	}
-	.logo {
-    margin: auto;
-    font-size: 8rem;
-    background: white;
-    padding: .5em 0.7em;
-    border-radius: 50% 50%;
-    color: #000000b3;
-    z-index: 10;
-}
-div#login-left::before,div#login-right::before {
+
+div#login-right::before {
     content: "";
     position: absolute;
     top: 0;
@@ -80,9 +72,6 @@ div#login-left::before,div#login-right::before {
 
   <main id="main" class=" bg-dark">
   		<div id="login-left">
-  			<div class="logo">
-  				<span class="fa fa-plane-departure"></span>
-  			</div>
   		</div>
   		<div id="login-right">
   			<div class="card col-md-8">

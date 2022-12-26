@@ -29,16 +29,6 @@ if($qry->num_rows > 0){
 					<textarea name="about" class="text-jqte"><?php echo isset($meta['about_content']) ? $meta['about_content'] : '' ?></textarea>
 
 				</div>
-				<div class="form-group">
-					<label for="" class="control-label">Image</label>
-					<input type="file" class="form-control" name="img" onchange="displayImg(this,$(this))">
-				</div>
-				<div class="form-group">
-					<img src="<?php echo isset($meta['cover_img']) ? '../assets/img/'.$meta['cover_img'] :'' ?>" alt="" id="cimg">
-				</div>
-				<center>
-					<button class="btn btn-info btn-primary btn-block col-md-2">Save</button>
-				</center>
 			</form>
 		</div>
 	</div>

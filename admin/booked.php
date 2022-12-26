@@ -62,7 +62,7 @@
 						 	<td class="text-center">
 						 			<button class="btn btn-outline-primary btn-sm edit_booked" type="button" data-id="<?php echo $row['bid'] ?>"><i class="fa fa-edit"></i></button>
 						 			<button class="btn btn-outline-danger btn-sm delete_booked" type="button" data-id="<?php echo $row['bid'] ?>"><i class="fa fa-trash"></i></button>
-								 <button class="btn btn-outline-danger btn-sm send_email" type="button" data-id="<?php echo $row['bid'] ?>"><i class="fa fa-email"></i></button>
+								 <button class="btn btn-outline-danger btn-sm send_email" type="button" data-id="<?php echo $row['bid'] ?>"><i class="fa fa-envelope-open"></i></button>
 						 	</td>
 
 						 </tr>
