@@ -237,6 +237,7 @@ class Action
 		}
 		if(isset($save))
 			return 1;
+		
 	}
 	function update_booked()
 	{

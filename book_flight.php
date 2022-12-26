@@ -62,12 +62,12 @@
 			data: $(this).serialize(),
 			success: function(resp) {
 				if (resp == 1) {
-					alert("Pls Pay");
-					var url = "https://buy.stripe.com/test_fZe6qTflAfLb6KQ001";
+					alert( "TO Pay click OK");
+					var url = "https://buy.stripe.com/test_00g4iLehw0Qh9X27su";
 					window.open(url, '_blank');
 					$('.modal').modal('hide')
 					end_load()
-					alert_toast("Flight successfully booked.", "success")
+					window.location.reload(true)
 				}
 			}
 		})

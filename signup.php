@@ -143,10 +143,10 @@
 					$('#signup-frm').prepend('<div class="alert alert-danger">Email already exist.</div>')
 					$('#signup-frm button[type="submit"]').removeAttr('disabled').html('Create');
 				}
-				else {
-					$('#signup-frm').prepend('<div class="alert alert-danger">Password and Confirm Password are not the same.</div>')
-					$('#signup-frm button[type="submit"]').removeAttr('disabled').html('Create');
-				}
+				// else {
+				// 	$('#signup-frm').prepend('<div class="alert alert-danger">Password and Confirm Password are not the same.</div>')
+				// 	$('#signup-frm button[type="submit"]').removeAttr('disabled').html('Create');
+				// }
 			}
 		})
 	}
