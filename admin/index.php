@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 
   <title>Admin | Online Flight Booking System</title>
  	
@@ -12,7 +15,7 @@
 	session_start();
   if(!isset($_SESSION['login_id']))
     header('location:login.php');
- include('./header.php'); 
+  include('./header.php'); 
  // include('./auth.php'); 
  ?>
 
@@ -79,6 +82,8 @@
       </div>
     </div>
   </div>
+
+  
 </body>
 <script>
 	 window.start_load = function(){
@@ -149,4 +154,5 @@ window._conf = function($msg='',$func='',$params = []){
     width: "100%"
   })
 </script>	
+
 </html>
