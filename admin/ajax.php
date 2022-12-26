@@ -102,4 +102,9 @@ if($action == "update_booked"){
 		echo $save;
 }
 
+if($action == "statistic"){
+	$show = $crud->statistic();
+	if($show)
+		echo $show;
+}
 

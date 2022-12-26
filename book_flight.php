@@ -53,6 +53,7 @@
 
 		})
 	})
+
 	$('#book-flight').submit(function(e) {
 		e.preventDefault()
 		start_load()

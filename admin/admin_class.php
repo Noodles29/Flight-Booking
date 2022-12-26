@@ -95,7 +95,7 @@ class Action
 		$data .= ", avatar = 'default_avt.jpg'";
 
 		if ($password != $confirmPassword) {
-			
+
 			return 3;
 			exit;
 		} else {
@@ -218,6 +218,14 @@ class Action
 		if ($save)
 			return 1;
 	}
+
+	function delete_user()
+	{
+		extract($_POST);
+		$delete = $this->db->query("DELETE FROM users where id = " . $id);
+		if ($delete)
+			return 1;
+	}
 	function delete_flight()
 	{
 		extract($_POST);
@@ -225,17 +233,20 @@ class Action
 		if ($delete)
 			return 1;
 	}
-	function book_flight(){
+	function book_flight()
+	{
 		extract($_POST);
 		foreach ($name as $k => $value) {
-			$data = " flight_id = $flight_id ";
+			$data = " flight_id = '$flight_id' ";
+			$data .= " , user_id = " . ($_SESSION['login_id']) . " ";
 			$data .= " , name = '$name[$k]' ";
 			$data .= " , address = '$address[$k]' ";
 			$data .= " , contact = '$contact[$k]' ";
 
-			$save[] = $this->db->query("INSERT INTO booked_flight set ".$data);
+
+			$save[] = $this->db->query("INSERT INTO booked_flight set " . $data);
 		}
-		if(isset($save))
+		if (isset($save))
 			return 1;
 	}
 	function update_booked()
@@ -247,6 +258,21 @@ class Action
 
 		$save = $this->db->query("UPDATE booked_flight set " . $data . " where id =" . $id);
 		if ($save)
+			return 1;
+	}
+
+	function statistic()
+	{
+		extract($_POST);
+		$data = "bookdate = '$bookdate'";
+		$data .= " , flight = '$flight' ";
+		$data .= " , sales = '$sales' ";
+		$data .= " , quantity = '$quantity' ";
+
+		if ($_POST['time'] == "1date") {
+			$show = $this->db->query("SELECT * from statistic_list where bookdate = '2022-12-25'");
+		}
+		if ($show)
 			return 1;
 	}
 }
