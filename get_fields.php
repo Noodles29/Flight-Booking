@@ -13,7 +13,7 @@
 
 <div class="row">
 <div class="form-group col-md-12">
-	<label class="control-label">Address</label>
+	<label class="control-label"> Email address</label>
 	<textarea name="address[]" id="" cols="30" rows="2" class="form-control"></textarea>
 </div>
 </div>

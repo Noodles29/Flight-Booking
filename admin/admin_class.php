@@ -245,24 +245,11 @@ class Action
 
 
 			$save[] = $this->db->query("INSERT INTO booked_flight set " . $data);
+
 		}
-		// require_once('../../email.php');
-		// $title = "Buying Ticket successfully this is your ticket";
-		// $body = "<p>Tks for buying ticket at cloudTravel, you can check your ticket at history. <br> Your flight id : </p>";
-		// $body.="<h4>Ticket info :</h4p>";
-
-
-		// $body .= " chan be du"; 
-		// 	//"<ul style='border:none ;margin:10px;'>
-		// 	// 	// <li>".$name."</li>            
-		// 	// 	// <li>".$address."</li>
-		// 	// 	// <li>".$contact."</li>
-		// 	// 	</ul>";
-		// $email = "kaidervn1133@gmail.com";
-		// $mail = new Mailer();
-		// $mail->sendMail($title,$body,$email);
-		if (isset($save))
+		if (isset($save)) {
 			return 1;
+		}
 		
 	}
 	function update_booked()
@@ -276,19 +263,6 @@ class Action
 		if ($save)
 			return 1;
 	}
+	
 
-	function statistic()
-	{
-		extract($_POST);
-		$data = "bookdate = '$bookdate'";
-		$data .= " , flight = '$flight' ";
-		$data .= " , sales = '$sales' ";
-		$data .= " , quantity = '$quantity' ";
-
-		if ($_POST['time'] == "1date") {
-			$show = $this->db->query("SELECT * from statistic_list where bookdate = '2022-12-25'");
-		}
-		if ($show)
-			return 1;
-	}
 }

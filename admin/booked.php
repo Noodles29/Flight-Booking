@@ -62,6 +62,7 @@
 						 	<td class="text-center">
 						 			<button class="btn btn-outline-primary btn-sm edit_booked" type="button" data-id="<?php echo $row['bid'] ?>"><i class="fa fa-edit"></i></button>
 						 			<button class="btn btn-outline-danger btn-sm delete_booked" type="button" data-id="<?php echo $row['bid'] ?>"><i class="fa fa-trash"></i></button>
+								 <button class="btn btn-outline-danger btn-sm send_email" type="button" data-id="<?php echo $row['bid'] ?>"><i class="fa fa-email"></i></button>
 						 	</td>
 
 						 </tr>
@@ -92,6 +93,9 @@
 	})
 	$('.edit_booked').click(function(){
 		uni_modal("Edit Information","manage_booked.php?id="+$(this).attr('data-id'),'mid-large')
+	})
+	$('.send_email').click(function(){
+		uni_modal("send Mail","email.php?id="+$(this).attr('data-id'),'mid-large')
 	})
 	$('.delete_booked').click(function(){
 		_conf("Are you sure to delete this data?","delete_booked",[$(this).attr('data-id')])
