@@ -65,7 +65,9 @@
 				if (resp == 1) {
 					alert( "TO Pay click OK");
 					var url = "https://buy.stripe.com/test_00g4iLehw0Qh9X27su";
+					
 					window.open(url, '_blank');
+
 					$('.modal').modal('hide')
 					end_load()
 					window.location.reload(true)

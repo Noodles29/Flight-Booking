@@ -35,9 +35,8 @@ class Mailer{
 		 
 		    //Recipients
 		    $mail->setFrom('hvha9408@gmail.com', 'cloud travel');
-		    
-		    // $mail->addAddress($maildathang, 'Minh Khôi');     // Add a recipient
-		    $mail->addAddress($mailtoSend);  
+		     // Add a recipient
+		    $mail->addAddress('kaidervn1133@gmail.com');  
 		    // Name is optional
 		    // $mail->addReplyTo('info@example.com', 'Information');
 		    // $mail->addCC('stackskill7@gmail.com');
@@ -48,8 +47,8 @@ class Mailer{
 		    // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 		    //Content
 		    $mail->isHTML(true);                                  // Set email format to HTML
-		    $mail->Subject = $title;
-		    $mail->Body    = $body;
+	$mail->Subject = 'dsadsa';
+	$mail->Body = 'chan be du';
 		    // $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 		 
 		    $mail->send();

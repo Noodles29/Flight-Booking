@@ -246,6 +246,21 @@ class Action
 
 			$save[] = $this->db->query("INSERT INTO booked_flight set " . $data);
 		}
+		// require_once('../../email.php');
+		// $title = "Buying Ticket successfully this is your ticket";
+		// $body = "<p>Tks for buying ticket at cloudTravel, you can check your ticket at history. <br> Your flight id : </p>";
+		// $body.="<h4>Ticket info :</h4p>";
+
+
+		// $body .= " chan be du"; 
+		// 	//"<ul style='border:none ;margin:10px;'>
+		// 	// 	// <li>".$name."</li>            
+		// 	// 	// <li>".$address."</li>
+		// 	// 	// <li>".$contact."</li>
+		// 	// 	</ul>";
+		// $email = "kaidervn1133@gmail.com";
+		// $mail = new Mailer();
+		// $mail->sendMail($title,$body,$email);
 		if (isset($save))
 			return 1;
 		
